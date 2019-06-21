@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import TestCool from './Mahesh';
-import TestComp from './MaheshFunction';
+import MaheshComp from './MaheshFunction';
+import ImageComp from './ImageComponent';
 
 class App extends Component {
   constructor() {
@@ -18,9 +18,8 @@ class App extends Component {
         <p>
           Start editing to see some magic happen :)
         </p>
-        <c1 />
-        <TestCool />
-        <TestComp />
+        <MaheshComp />
+        <ImageComp />
       </div>
     );
   }
