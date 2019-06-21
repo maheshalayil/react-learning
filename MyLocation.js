@@ -1,13 +1,26 @@
 import React from 'react';
 
-let MyLocation = () => {
-  window.navigator.geolocation.getCurrentPosition(
-    position => console.log(position),
-    err => console.log(err)
-  );
+class MyLocation extends React.Component {
+ 
+  constructor(props) {
+    super(props);
+    this.state = { lat:null, lon:null };
+  }
   
-  return (
-    <p>My location is: </p>
-  );
+  render() {
+
+    this.getLocation().then( 
+      result => this.setState({ lat: result.lat})
+    );
+
+    return <p>Function return value is : { this.state.lat } </p>
+  }
+
+  getLocation () {
+    return new Promise( (resolve) => {
+      setTimeout(()=> resolve( {lat:10, lon:11}), 10000);
+    });
+  }
 }
+
 export default MyLocation
