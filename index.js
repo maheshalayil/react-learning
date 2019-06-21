@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import './style.css';
 import MaheshComp from './MaheshFunction';
 import ImageComp from './ImageComponent';
+import MyLocation from './MyLocation';
 
 class App extends Component {
   constructor() {
@@ -20,6 +21,7 @@ class App extends Component {
         </p>
         <MaheshComp />
         <ImageComp />
+        <MyLocation />
       </div>
     );
   }
