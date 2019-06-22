@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import './style.css';
 import MaheshComp from './MaheshFunction';
 import ImageComp from './ImageComponent';
-import MyLocation from './MyLocation';
+import MyForm from './MyForm';
 
 class App extends Component {
   constructor() {
@@ -19,8 +19,7 @@ class App extends Component {
         <p>
           Start editing to see some magic happen :)
         </p>
-        <MaheshComp />
-        <MyLocation />
+        <MyForm />
       </div>
     );
   }
