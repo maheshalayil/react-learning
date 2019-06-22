@@ -8,19 +8,18 @@ class MyLocation extends React.Component {
   }
   
   render() {
-
-    this.getLocation().then( 
-      result => this.setState({ lat: result.lat})
+    return (        
+        <p>Function return value is : { this.state.lat } </p>        
     );
+  }
 
-    return (
-        <p>Function return value is : { this.state.lat } </p>
-    );
+  componentDidMount() {
+    this.getLocation().then(result=> this.setState({lat: result.lat}));
   }
 
   getLocation () {
     return new Promise( (resolve) => {
-      setTimeout(()=> resolve( {lat:10, lon:11}), 5000);
+      setTimeout(()=> resolve( {lat:10, lon:11}), 10000);
     });
   }
 }
