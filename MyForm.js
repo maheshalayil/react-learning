@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchField from './SearchField'
 import git from './gitapi';
+import GitUsers from './GitUsers';
 
 class MyForm extends React.Component {
   state = { total: 0, users: []};
@@ -21,6 +22,7 @@ class MyForm extends React.Component {
         <h1>form example </h1>
         <SearchField onSubmit={this.handleSubmit} />
         <p>Found {this.state.total} records</p>
+        <GitUsers users={this.state.users} />
       </div>
     )
   }
