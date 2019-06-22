@@ -6,10 +6,12 @@ export default class GitUsers extends React.Component {
   }
 
   render() {
-    let list = this.props.users.map(x => <li className="list-group-item">{x.login}</li>)
+    let list = this.props.users.map(x => {
+      return <div key={x.login} className="col">{x.login}</div> 
+      });
     return (
-      <div>
-        <ul className='list-group'>{list}</ul>
+      <div className="row">
+        {list}
       </div>      
     );
   }
